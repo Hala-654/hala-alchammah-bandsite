@@ -1,0 +1,16 @@
+ul, li {
+    list-style-type: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}

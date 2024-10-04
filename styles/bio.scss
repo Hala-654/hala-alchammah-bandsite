@@ -1,0 +1,341 @@
+@use './partials/main' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+.section {
+    &--header {
+        @include full-wrap($prim-black);
+    }
+    &--hero {
+        @include full-wrap($prim-black);
+    }
+    &--about {
+        @include full-wrap($prim-white);
+    }
+    &--gallery {
+        @include full-wrap($prim-silver);
+    }
+    &--footer {
+        @include full-wrap($prim-black);
+    }
+}
+
+.navbar {
+    background-color: $prim-black;
+    @include flex (column, center, center);
+    @include tablet {
+        @include flex (row, center, flex-end)
+    }
+    @include desktop {
+        max-width: 80rem;
+        margin: 0 auto; 
+    }
+    &__img {
+        width: $width;
+        height: 2.6vh;
+        margin: 1.5rem 0 0 0;
+        @include tablet {
+            width: $width;
+            height: 2vh;
+            margin: 0 1.4rem;
+        }
+        @include desktop {
+            width: $width;
+            height: 1.8vh;
+            margin: 0 4.5rem;
+        }
+    }
+    &__pages {
+        width: $width;
+    }
+    &__list {
+        @include flex (row, flex-end, space-around);
+        position: relative;
+        top: 0.5rem;
+        margin: 0.3rem 0;
+        @include tablet {
+            justify-content: left;
+            padding: 0.5rem 0 0 4rem;
+            margin: 0.5rem 0;
+        }
+    }
+    &__link {
+        width: $width;
+        padding: 0 0 0.5rem 0;
+        transition: all ease-in-out;
+        font-size: 1rem;
+        border-bottom-width: 0.3125rem;
+        border-bottom-style: solid;
+        border-bottom-color: $prim-white;
+        @include tablet {
+            padding: 0 0 1rem 0;
+            margin: 0 1rem;
+            width: 5rem;
+        }
+        @include desktop {
+            margin: 0 0.4rem;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    background-image: url("/assets/images/hero-bio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 24vh;
+    @include tablet {
+        height: 27vh;
+        padding: 2rem;
+    }
+    @include desktop {
+        height: 65vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__title {
+        align-self: center;
+        color: $prim-white;
+        @include desktop {
+            margin: 5rem;
+        }
+    }
+    &__text {
+        font-weight: 600;
+        @include tablet {
+            font-size: 3.3rem;
+        }
+    }
+}
+
+.about {
+    @include flex-direction (column);
+    @include tablet {
+        padding: 2rem;
+    }
+    &__details {
+        @include tablet {
+            padding: 0 3.5rem;
+        }
+        @include desktop {
+            margin: 0 7rem;
+        }
+    }
+    &__title {
+        padding: 0;
+        @include tablet{
+            font-size: 2rem;
+        }
+        @include desktop {
+            margin: .5rem;
+            font-size: 2.5rem;
+        }
+    }
+    &__img {
+        padding: 0.3rem;
+        object-fit: cover;
+        object-position: bottom;
+        @include tablet {
+            height: 18.75rem;
+        }
+        @include desktop {
+            height: 28.125rem;
+            padding-right: 1rem;
+        }
+    }
+    &__quote {
+        @include tablet {
+            margin: 1rem 0 0 0;
+        }
+        @include desktop {
+            width: 76%;
+        }
+    }
+    &__quote--text{
+        font-size: 0.9rem;
+        text-align: left;
+        @include tablet {
+            font-size: 1.4rem;
+        }
+        @include desktop {
+            font-size: 1.4rem;
+            text-align: left;
+        }
+    }
+    &__author {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+        @include tablet {
+            padding: 0.7 0;
+            font-size: 1rem;
+        }
+    }
+    &__bio {
+        padding: 0.5rem 0;
+    }
+    &__bio--title {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        font-weight: 600;
+        @include tablet {
+            font-size: 1.3rem;
+        }
+        @include desktop {
+            font-size: 1.5rem;
+        }
+    }
+    &__bio--text {
+        @include tablet {
+            @include flex-direction(row);
+        }
+    }
+    &__bio--text1{
+        font-size: 0.8rem;
+        @include tablet {
+            padding: 1rem 2rem 0 0;
+        }
+        @include desktop {
+            width: 100%;
+            margin: 0;
+            font-size: 0.9rem;
+            padding-right: 1rem;
+            text-align: left;
+        }
+    }
+}
+
+.gallery {
+    background-color: $prim-silver;
+    padding: 0.5rem 1rem;
+    @include tablet {
+        padding: 1.5rem 1rem;
+    }
+    @include desktop {
+        padding: 3rem 7rem 2rem 7rem;
+        max-width: 80rem;
+        margin: 0;
+    }
+    &__title {
+        padding: 1rem 0 0 0;
+        @include tablet {
+            padding: 1.5rem 0 0.5rem 1rem;
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 2.5rem;
+            padding: 1.5rem 0 0.5rem 0.7rem;
+        }
+    }
+    &__list {
+        @include tablet {
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+        }
+        @include desktop {
+            padding: 0;
+        }
+    }
+    &__img {
+        padding: 0.5rem 0;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+            transform: all ease-in-out 0.2s;
+        }
+        @include tablet {
+            width: 15rem;
+            padding: 0.5rem;
+        }
+        @include desktop {
+            width: 21.5rem;
+            padding: 0.7rem 1rem 0.7rem 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $prim-black;
+    color: $prim-white;
+    padding: 1rem 1rem 0 1rem;
+    @include tablet {
+        @include flex(row, flex-start, space-between);
+        padding: 1rem 2rem;
+    }
+    @include desktop {
+        padding: 1rem 8rem;
+        max-width: $width;
+        margin: 0 auto;
+    }
+    &__details {
+        padding: 0;
+        @include tablet {
+            width: $width;
+            @include flex(row, center, flex-start);
+        }
+    }
+    &__social {
+        padding: 0;
+        display: flex;
+        width: $width;
+        @include flex-direction (column);
+        @include tablet {
+            @include flex(row, center, space-between);
+        }
+    }
+    &__title {
+        padding: 0;
+        font-size: 1.6rem;
+        @include tablet {
+            font-size: 2.2rem;
+            margin-right: 1.5rem;
+        }
+    }
+    &__links {
+        padding: 0;
+        @include flex-direction(row);
+    }
+    &__onelink {
+        margin: 0 0.4rem 0 0;
+    }
+    &__icon {
+        margin: 0 1.2rem 0 0;
+        height: 1.5rem;
+        padding: 0;
+        border-radius: 0.2rem;
+    }
+    &__contact {
+        font-size: 0.8rem;
+        @include tablet {
+            @include flex(row, center, flex-start);
+            width: $width;
+            padding: 0;
+        }
+    }
+    &__list {
+        @include tablet {
+            padding-right: 2rem;
+        }
+    }
+    &__list--title{
+        padding: 0;
+        font-weight: 600;
+        @include tablet {
+            font-size: 0.9rem;
+        }
+    }
+    &__address {
+        padding: 0;
+    }
+    &__email {
+        color: $prim-silver;
+        border-radius: 0.3rem;
+        &:hover{
+            background-color: $prim-white;
+        }
+    }
+    // &__logo {
+        
+    // }
+}

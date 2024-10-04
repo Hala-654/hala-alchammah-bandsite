@@ -1,0 +1,44 @@
+//Color scheme
+//Primary colors
+$prim-black: #323232;
+$prim-silver: #AFAFAF;
+$prim-white: #FFFFFF;
+
+//Secondary colors
+$sec-black: #000000;
+$sec-mercury: #E1E1E1;
+$sec-alabaster: #FAFAFA;
+
+//layout grid
+$desktop-breakpoint: 1280px;
+$tablet-breakpoint: 768px;
+
+$width: 100%;
+$max-width: 1280px;
+
+//Fonts
+@font-face {
+    font-family: "Avenir Next LT Pro";
+    src: url(//assets/font/AvenirNextLTPro-Regular.otf) format("otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url(/assets/font/AvenirNextLTPro-Demi.otf) format("otf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url(/assets/font/AvenirNextLTPro-Bold.otf) format("otf");
+    font-style: 700;
+    font-style: normal;
+}
+
+html {
+    font-family: "Avenir Next";
+}
+
