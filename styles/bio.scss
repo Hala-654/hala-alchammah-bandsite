@@ -22,14 +22,21 @@
 
 .navbar {
     background-color: $prim-black;
+    line-height: 0.6;
     @include flex (column, center, center);
     @include tablet {
         @include flex (row, center, flex-end)
     }
     @include desktop {
+        @include flex (row, center, flex-end);
         max-width: 80rem;
-        margin: 0 auto; 
     }
+    &__title {
+        margin: 0rem;
+        padding: 0.9rem;
+    }
+
+
     &__img {
         width: $width;
         height: 2.6vh;
@@ -49,33 +56,31 @@
         width: $width;
     }
     &__list {
+        color: $prim-white;
         @include flex (row, flex-end, space-around);
         position: relative;
         top: 0.5rem;
-        margin: 0.3rem 0;
+        margin: 1.2rem 1rem;
+        
         @include tablet {
             justify-content: left;
             padding: 0.5rem 0 0 4rem;
             margin: 0.5rem 0;
         }
+        @include desktop {
+            justify-content: left;
+            padding: 0.5rem 0 0 4rem;
+        }
     }
-    &__link {
-        width: $width;
-        padding: 0 0 0.5rem 0;
-        transition: all ease-in-out;
-        font-size: 1rem;
+
+    &__list1, &__list2{
+        color: $prim-white;
+        width: 100%;
         border-bottom-width: 0.3125rem;
         border-bottom-style: solid;
-        border-bottom-color: $prim-white;
-        @include tablet {
-            padding: 0 0 1rem 0;
-            margin: 0 1rem;
-            width: 5rem;
-        }
-        @include desktop {
-            margin: 0 0.4rem;
-        }
+        padding: 0 0 0.3rem 0;
     }
+
 }
 
 .hero {
@@ -85,36 +90,44 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 24vh;
+    height: 34vh;
+    
     @include tablet {
-        height: 27vh;
+        height: 48vh;
         padding: 2rem;
     }
     @include desktop {
-        height: 65vh;
+        height: 50vh;
         object-fit: cover;
         object-position: center;
     }
     &__title {
         align-self: center;
         color: $prim-white;
-        @include desktop {
-            margin: 5rem;
-        }
-    }
-    &__text {
-        font-weight: 600;
         @include tablet {
-            font-size: 3.3rem;
+            width: $width;
+            font-size: 2.3rem;
+        }
+        @include desktop {
+            width: $width;
+            margin: 5rem;
+            
+        }
+        &--text {
+                font-size: 3rem;
+                padding: 0 2rem;
+
         }
     }
 }
 
 .about {
     @include flex-direction (column);
+    
     @include tablet {
         padding: 2rem;
     }
+    
     &__details {
         @include tablet {
             padding: 0 3.5rem;
@@ -124,91 +137,142 @@
         }
     }
     &__title {
-        padding: 0;
+        padding: 1rem;
+        font-size: 3rem;
+        font-weight: 500;
+        margin: 0;
         @include tablet{
-            font-size: 2rem;
+            font-size: 2.2rem;
+            padding: 1rem 0.5rem 0  ;
         }
         @include desktop {
-            margin: .5rem;
+            margin: 1rem;
             font-size: 2.5rem;
+            padding: 1rem 0.5rem 1rem 4.5rem ;
         }
     }
+
     &__img {
-        padding: 0.3rem;
+        padding: 0 1rem;
+        width: 100%;
+        height: 20rem;
         object-fit: cover;
-        object-position: bottom;
+
         @include tablet {
-            height: 18.75rem;
+            height: 20rem;
+            padding: 0 4rem;
         }
         @include desktop {
-            height: 28.125rem;
-            padding-right: 1rem;
+            height: 30rem;
+            padding: 0 5rem;
         }
     }
+
     &__quote {
+        margin: 0 1rem;
+
         @include tablet {
-            margin: 1rem 0 0 0;
+            margin: 0 4rem;
         }
         @include desktop {
-            width: 76%;
+            width: 80%;
         }
     }
     &__quote--text{
-        font-size: 0.9rem;
+        font-size: 1.9rem;
         text-align: left;
+        font-weight: 500;
         @include tablet {
-            font-size: 1.4rem;
+            font-size: 1.33rem;
+            padding: 0 0.5rem;
+            margin-bottom: 0;
         }
         @include desktop {
             font-size: 1.4rem;
             text-align: left;
+            padding: 0 5rem;
+
         }
     }
     &__author {
-        font-size: 0.9rem;
-        padding: 0.5rem 0;
+        font-size: 1.9rem;
+        padding: 0;
+        font-weight: 500;
         @include tablet {
-            padding: 0.7 0;
+            padding: 0.7rem 0;
             font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+        @include desktop {
+            padding: 0 5rem ;
         }
     }
+
     &__bio {
         padding: 0.5rem 0;
     }
     &__bio--title {
-        font-size: 1rem;
-        padding: 0.5rem 0;
-        font-weight: 600;
+        font-size: 1.7rem;
+        padding: 0rem 1rem;
+        font-weight: 500;
         @include tablet {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            padding: 0 4rem;
+            margin-bottom: 0rem;
+            margin-top: 0;
         }
         @include desktop {
             font-size: 1.5rem;
+            padding: 0 5rem
         }
     }
+
     &__bio--text {
+        @include flex-direction (column);
+
         @include tablet {
             @include flex-direction(row);
         }
+        @include desktop {
+            @include flex-direction(row)
+        }
     }
+
     &__bio--text1{
-        font-size: 0.8rem;
+        font-size: 1.4rem;
+        padding: 0 1rem;
         @include tablet {
-            padding: 1rem 2rem 0 0;
+            padding: 1rem 1.5rem 0 4rem;
+            font-size: 0.8rem;
         }
         @include desktop {
-            width: 100%;
-            margin: 0;
             font-size: 0.9rem;
-            padding-right: 1rem;
+            margin: 0;
+            padding: 0 1rem 1rem 5rem;
             text-align: left;
+        }
+    }
+    &__bio--text2 {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+        @include tablet {
+            font-size: 0.8rem;
+            padding: 1rem 4rem 0 0;
+            
+        }
+        @include desktop {
+            font-size: 0.9rem;
+            margin: 0;
+            padding: 0 5rem 1rem 1rem;
+
         }
     }
 }
 
 .gallery {
-    background-color: $prim-silver;
-    padding: 0.5rem 1rem;
+    background-color: $sec-alabaster;
+    
     @include tablet {
         padding: 1.5rem 1rem;
     }
@@ -218,10 +282,14 @@
         margin: 0;
     }
     &__title {
-        padding: 1rem 0 0 0;
+        margin: 0;
+        padding: 1rem;
+        font-size: 3rem;
+        font-weight: 500;
         @include tablet {
-            padding: 1.5rem 0 0.5rem 1rem;
+            padding: 1.5rem 0 0 3rem;
             font-size: 2rem;
+            font-weight: 600;
         }
         @include desktop {
             font-size: 2.5rem;
@@ -232,21 +300,24 @@
         @include tablet {
             @include flex(row, center, center);
             flex-wrap: wrap;
+            padding: 0;
         }
         @include desktop {
             padding: 0;
+            @include flex (row, center, center);
+            flex-wrap: wrap;
         }
     }
     &__img {
-        padding: 0.5rem 0;
+        padding: 1rem;
         filter: grayscale(100%);
         &:hover {
             filter: grayscale(0%);
             transform: all ease-in-out 0.2s;
         }
         @include tablet {
-            width: 15rem;
-            padding: 0.5rem;
+            width: 30%;
+            padding: 0.9rem;
         }
         @include desktop {
             width: 21.5rem;
@@ -260,7 +331,7 @@
     color: $prim-white;
     padding: 1rem 1rem 0 1rem;
     @include tablet {
-        @include flex(row, flex-start, space-between);
+        @include flex(column, flex-start, space-between);
         padding: 1rem 2rem;
     }
     @include desktop {
@@ -269,31 +340,50 @@
         margin: 0 auto;
     }
     &__details {
-        padding: 0;
+        padding: 0.5rem;
+        @include flex(column, left, flex-start);
+       
         @include tablet {
             width: $width;
             @include flex(row, center, flex-start);
+        }
+        @include desktop {
+            @include flex (row, center, flex-start);
+            width: $width
         }
     }
     &__social {
         padding: 0;
         display: flex;
         width: $width;
+
         @include flex-direction (column);
         @include tablet {
-            @include flex(row, center, space-between);
+            @include flex(row, center, flex-start);
+        }
+
+        @include desktop {
+            @include flex(row, center, flex-start);
+        }
+        &--logo {
+            display: flex;
+            @include tablet;
+                @include flex (row, center, flex-end)
         }
     }
+
     &__title {
-        padding: 0;
+        padding: 0 2rem 0 0;
         font-size: 1.6rem;
         @include tablet {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             margin-right: 1.5rem;
+            font-weight: 400;
+
         }
     }
     &__links {
-        padding: 0;
+        padding: 0.5rem;
         @include flex-direction(row);
     }
     &__onelink {
@@ -308,14 +398,22 @@
     &__contact {
         font-size: 0.8rem;
         @include tablet {
-            @include flex(row, center, flex-start);
+            @include flex(row, center, center);
             width: $width;
             padding: 0;
+        }
+
+        @include desktop {
+            @include flex(row, center, flex-start);
+            width: $width;
         }
     }
     &__list {
         @include tablet {
             padding-right: 2rem;
+        }
+        @include desktop {
+            padding-right: 5rem;
         }
     }
     &__list--title{
@@ -335,7 +433,13 @@
             background-color: $prim-white;
         }
     }
-    // &__logo {
-        
-    // }
+   
+    &__copyright {
+        margin: 0;
+        color: $prim-silver;
+        padding: 1rem 2rem;
+        @include desktop {
+            padding-left: 8rem;
+        }
+    }
 }
