@@ -7,7 +7,7 @@
 
 //Responsive
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+    @media screen and (min-width: $tablet-breakpoint) {
       @content;
     }
 }

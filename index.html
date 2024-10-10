@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <header class="section--header">
+    <header id="home" class="section--header">
       <nav class="navbar">
         <div class="navbar__logo">
           <h1 class="navbar__title">
@@ -19,8 +19,8 @@
         </div>
         <div class="navbar__pages">
           <ul class="navbar__list">
-            <li><a class="navbar__list1" href="index.html">Biography</a></li>
-            <li><a class="navbar__list2" href="">Shows</a></li>
+            <li class="navbar__list1"><a class="navbar__link" href="index.html">Biography</a></li>
+            <li class="navbar__list1"><a class="navbar__link" href="">Shows</a></li>
           </ul>
         </div>
       </nav>
@@ -84,52 +84,31 @@
         <h2 class="gallery__title">Photo Gallery</h2>
         <div class="gallery__list">
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-1.jpg"
-              alt="laser in concert"
-            />
+            <img src="/assets/images/Photo-gallery-1.jpg" alt="laser in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-2.jpg"
-              alt="woman in concert"
-            />
+            <img src="/assets/images/Photo-gallery-2.jpg" alt="woman in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-3.jpg"
-              alt="hands in concert"
-            />
+            <img src="/assets/images/Photo-gallery-3.jpg" alt="hands in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-4.jpg"
-              alt="spotlights in concert"
-            />
+            <img src="/assets/images/Photo-gallery-4.jpg"  alt="spotlights in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-5.jpg"
-              alt="sparks in concert"
-            />
+            <img src="/assets/images/Photo-gallery-5.jpg" alt="sparks in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-6.jpg"
-              alt="singer in concert" />
+            <img src="/assets/images/Photo-gallery-6.jpg" alt="singer in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-7.jpg"
-              alt="colors in concert" />
+            <img src="/assets/images/Photo-gallery-7.jpg" alt="colors in concert" />
           </div>
           <div class="gallery__img">
             <img src="/assets/images/Photo-gallery-8.jpg" alt="dj in concert" />
           </div>
           <div class="gallery__img">
-            <img
-              src="/assets/images/Photo-gallery-9.jpg"
-              alt="confetti in concert" />
+            <img src="/assets/images/Photo-gallery-9.jpg" alt="confetti in concert" />
           </div>
         </div>
       </div>
@@ -138,50 +117,32 @@
     <footer class="section--footer">
       <section class="footer">
         <div class="footer__details">
-          <div class="footer__social">
+          <section class="footer__social">
             <div class="footer__title">
               <h2>Get In Touch</h2>
             </div>
             <div class="footer__links">
-              <a class="footer__onelink" href="www.instagram.com" target="_blank"
-                ><img
-                  class="footer__icon"
-                  src="/assets/icons/SVG/Icon-instagram.svg"
-                  alt="instagram"
-              /></a>
-              <a class="footer__onelink" href="www.facebook.com" target="_blank"
-                ><img
-                  class="footer__icon"
-                  src="/assets/icons/SVG/Icon-facebook.svg"
-                  alt="facebook"
-              /></a>
-              <a class="footer__onelink" href="www.twitter.com" target="_blank"
-                ><img
-                  class="footer__icon"
-                  src="/assets/icons/SVG/Icon-twitter.svg"
-                  alt="twitter"
-              /></a>
+              <a class="footer__onelink" href="https://www.instagram.com" target="_blank"
+                ><img class="footer__icon" src="/assets/icons/SVG/Icon-instagram.svg"  alt="instagram" /></a>
+              <a class="footer__onelink" href="https://www.facebook.com" target="_blank"
+                ><img class="footer__icon" src="/assets/icons/SVG/Icon-facebook.svg" alt="facebook" /></a>
+              <a class="footer__onelink" href="https://www.twitter.com" target="_blank"
+                ><img class="footer__icon" src="/assets/icons/SVG/Icon-twitter.svg"  alt="twitter" /></a>
             </div>
-            <div>
-              <img class="footer__social--logo" src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
-            </div>
-          </div>
+          </section>
         </div>
 
-        <div class="footer__contact">
+       
+        <section class="footer__contact">
           <div class="footer__list">
             <div>
               <h4 class="footer__list--title">The Bees Knees Management</h4>
             </div>
             <div>
-              <p class="footer__address">503 Broadway Penthouse,</br>New York, NY 10012, USA</p>
+              <p class="footer__address">503 Broadway Penthouse, </br> New York, NY 10012, USA</p>
             </div>
             <div>
-              <p><a
-                  class="footer__email"
-                  href="mailto:info@thebeesknees.com"
-                  target="_blank"
-                  >info@thebeesknees.com</a></p>
+              <p><a class="footer__email" href="mailto:info@thebeesknees.com" target="_blank">info@thebeesknees.com</a></p>
             </div>
           </div>
           <div class="footer__list">
@@ -207,14 +168,26 @@
                 <p><a class="footer__email" href="mailto:bookings@archentertainment.com" target="_blank">bookings@archentertainment.com</a></p>
             </div>
           </div>
-
-        </div>
-      </section>
-      <div class="footer__logo">
-        <p class="footer__copyright">
+        </section>
+        <!-- Mobile display - logo -->
+        <section class="footer__logo footer__logo--mobile">
+          <a class="footer__link--mobile" href="#home"></a><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
+          <p class="footer__copyright">
             Copyright The Bees Knees © 2023 All Rights Reserved
-        </p>
-      </div>
+          </p>
+        </section>
+      </section>
+      
+      <!-- Tablet display - logo -->
+      <section class="footer__logo--tablet">
+         <a class="footer__link--tablet" href="#home"></a><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
+      </section>
+
+      <!-- Desktop display - logo -->
+        <section class="footer__logo footer__logo--desktop">
+          <a class="footer__link--desktop" href="#home"></a><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
+        </section>
+
     </footer>
   </body>
 </html>
