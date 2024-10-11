@@ -19,6 +19,9 @@
     &--footer {
         @include full-wrap($prim-black);
     }
+    &--comments {
+        @include full-wrap($prim-white);
+    }
 }
 
 .hero {
@@ -42,10 +45,6 @@
         object-position: center;
     }
 
-    
-        
-        
-       
 
      &__title {
         align-self: center;
@@ -245,3 +244,74 @@
     }
 }
 
+.comments {
+    @include flex(column, flex-start, center);
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+
+    }
+
+    &__add--comments {
+        @include flex-direction(row);
+        width: 100%;
+    }
+
+    &__img {
+        background-image: url('/assets/images/Mohan-muruge.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 3rem;
+        height: 2.5rem;
+        margin: 2rem 0;
+    }
+
+    &__form {
+        display: flex;
+        width: 100%;
+        @include flex (column, left, space-between);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 0 0 1rem;
+    }
+
+    &__label {
+        text-transform: uppercase;
+        color: $prim-silver;
+        font-size: 0.9rem;
+        
+    }
+
+    &__name, &__text {
+        width: 100%;
+        margin: 0.3rem 0 0.9rem 0;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        border-style: solid;
+        border-color: $sec-mercury;
+
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 0.5rem 2rem;
+        background-color: $prim-black;
+        color: $prim-white;
+        text-transform: uppercase;
+        border-radius: 0.25rem;
+        border: none;
+    }
+}
