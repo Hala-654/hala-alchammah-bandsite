@@ -42,23 +42,24 @@
         object-position: center;
     }
 
-    &__title {
+    
+        
+        
+       
+
+     &__title {
         align-self: center;
         color: $prim-white;
+        font-family: 'Avenir Next';
+        @include tablet {
+            font-size: 3.3rem
+        }
         @include desktop {
+            font-size: 3.6rem;
             margin: 5rem;
         }
-
-        &--text {
-            font-family: 'Avenir Next';
-            @include tablet {
-                font-size: 3.3rem
-            }
-            @include desktop {
-                font-size: 3.6rem;
-            }
-        }
     }
+    
 }
 
 .about {

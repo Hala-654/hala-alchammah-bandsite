@@ -397,23 +397,17 @@ html {
 .hero__title {
   align-self: center;
   color: #FFFFFF;
-}
-@media screen and (min-width: 80rem) {
-  .hero__title {
-    margin: 5rem;
-  }
-}
-.hero__title--text {
   font-family: "Avenir Next";
 }
 @media screen and (min-width: 48rem) {
-  .hero__title--text {
+  .hero__title {
     font-size: 3.3rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .hero__title--text {
+  .hero__title {
     font-size: 3.6rem;
+    margin: 5rem;
   }
 }
 
