@@ -251,7 +251,7 @@
     margin: 0 auto;
 
     &__title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 1rem 0;
 
     }
@@ -268,6 +268,8 @@
         background-position: center;
         width: 3rem;
         height: 2.5rem;
+        object-fit: cover;
+        border-radius: 50%;
         margin: 2rem 0;
     }
 
@@ -279,19 +281,20 @@
 
     &__list {
         margin: 0;
-        padding: 0 0 0 1rem;
+        padding: 0 0 1rem 1rem;
     }
 
     &__label {
         text-transform: uppercase;
         color: $prim-silver;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        font-family: 'Avenir Next LT Pro';
         
     }
 
     &__name, &__text {
         width: 100%;
-        margin: 0.3rem 0 0.9rem 0;
+        margin: 0.3rem 0 1.2rem 0;
         padding: 1rem;
         border-radius: 0.25rem;
         border-style: solid;
@@ -313,5 +316,59 @@
         text-transform: uppercase;
         border-radius: 0.25rem;
         border: none;
+    }
+}
+
+.display-comments {
+    margin: 0;
+    line-height: 1.2rem;
+    font-family: 'Avenir Next LT Pro';
+
+    &__list {
+        padding: 0;
+    }
+
+    &__card {
+        @include flex(row, left, space-between);
+        border-bottom: 0.0625rem;
+        border-bottom-style: solid;
+        border-bottom-color: $prim-silver;
+        padding: 1rem 0 1rem 4rem;
+        width: 100%;
+        &:first-child {
+            border-top: 0.0625rem;
+            border-top-style: solid;
+            border-top-color: $prim-silver;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 0 0 0 1rem;
+    }
+
+    &__name-and-date {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.9rem;
+        padding: 0 0 0.5rem 0;
+    }
+
+    &__name {
+        font-size: 0.9rem;
+        padding: 0 0 0.5rem 0;
+        font-family: 'Avenir Next';
+     
+    }
+
+    &__date {
+        color: $prim-silver;
+        font-size: 0.9rem;
+
+    }
+    &__text {
+        text-align: left;
+        font-size: 0.9rem;
     }
 }

@@ -649,7 +649,7 @@ html {
   margin: 0 auto;
 }
 .comments__title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem 0;
 }
 .comments__add--comments {
@@ -664,6 +664,9 @@ html {
   background-position: center;
   width: 3rem;
   height: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
   margin: 2rem 0;
 }
 .comments__form {
@@ -676,16 +679,17 @@ html {
 }
 .comments__list {
   margin: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 0 1rem 1rem;
 }
 .comments__label {
   text-transform: uppercase;
   color: #AFAFAF;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  font-family: "Avenir Next LT Pro";
 }
 .comments__name, .comments__text {
   width: 100%;
-  margin: 0.3rem 0 0.9rem 0;
+  margin: 0.3rem 0 1.2rem 0;
   padding: 1rem;
   border-radius: 0.25rem;
   border-style: solid;
@@ -704,4 +708,53 @@ html {
   text-transform: uppercase;
   border-radius: 0.25rem;
   border: none;
+}
+
+.display-comments {
+  margin: 0;
+  line-height: 1.2rem;
+  font-family: "Avenir Next LT Pro";
+}
+.display-comments__list {
+  padding: 0;
+}
+.display-comments__card {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-between;
+  border-bottom: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #AFAFAF;
+  padding: 1rem 0 1rem 4rem;
+  width: 100%;
+}
+.display-comments__card:first-child {
+  border-top: 0.0625rem;
+  border-top-style: solid;
+  border-top-color: #AFAFAF;
+}
+.display-comments__content {
+  width: 100%;
+  padding: 0 0 0 1rem;
+}
+.display-comments__name-and-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.9rem;
+  padding: 0 0 0.5rem 0;
+}
+.display-comments__name {
+  font-size: 0.9rem;
+  padding: 0 0 0.5rem 0;
+  font-family: "Avenir Next";
+}
+.display-comments__date {
+  color: #AFAFAF;
+  font-size: 0.9rem;
+}
+.display-comments__text {
+  text-align: left;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=bio.css.map */
