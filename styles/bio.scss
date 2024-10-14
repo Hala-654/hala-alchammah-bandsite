@@ -5,9 +5,7 @@
 @use './partials/comments' as *;
 
 .section {
-    &--header {
-        @include full-wrap($prim-black);
-    }
+    
     &--hero {
         @include full-wrap($prim-black);
     }
@@ -17,9 +15,7 @@
     &--gallery {
         @include full-wrap($prim-silver);
     }
-    &--footer {
-        @include full-wrap($prim-black);
-    }
+    
     &--comments {
         @include full-wrap($prim-white);
     }

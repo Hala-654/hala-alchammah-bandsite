@@ -3,6 +3,15 @@
 @use './global' as *;
 @use './typography' as *;
 
+.section {
+    &--header {
+        @include full-wrap($prim-black);
+    }
+    &--footer {
+        @include full-wrap($prim-black);
+    }
+}
+
 // Header layout
 .navbar {
     background-color: $prim-black;

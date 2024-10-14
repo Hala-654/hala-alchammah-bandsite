@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles/shows.css" rel="stylesheet" >
+        <script src="/scripts/shows-info.js"></script> 
+        <script src="/scripts/build-shows-page.js"></script> 
+        <title>BANDSITE - Shows</title>
+    </head>
+<body>
+
+    <header id="home" class="section--header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <h1 class="navbar__title">
+                    <a class="navbar__link" href="/index.html"><img class="navbar__img" src="./../assets/logo/Logo-bandsite.svg" alt="Bandsite Logo"></a>
+                </h1>
+            </div>
+            <div class="navbar__pages">
+                <ul class="navbar__list">
+                  <li class="navbar__list1"><a class="navbar__link" href="/index.html">Biography</a></li>
+                  <li class="navbar__list1"><a class="navbar__link" href="/pages/shows.html">Shows</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- hero section -->
+    <section class="section--hero">
+        <section class="hero">
+            <div class="hero__title">
+                <p class="hero__album-title">Beautiful Beasts Album</p>
+                <h2 class="hero__text">Stripes of Yellow x For The Stings</h2>
+            </div>
+            <div class="hero__music">
+                <iframe class="hero__iframe" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/191340243"></iframe>
+            </div>
+
+        </section>
+    </section>
+<!-- concert section -->
+
+<section class="section--concerts">
+    <section class="shows">
+        <!--  mobile and tablet -->
+        <h2 class="shows__title">Shows</h2>
+        <!--  desktop -->
+        <div>
+            <h2 class="shows__title--desktop">Shows</h2>
+        </div>
+        <ul id="shows-list" class="shows__list">
+            <li class="shows__list-item">
+                <ul class="shows__label--tabletAndDesktop">
+                    <div class="shows__date">Date</div>
+                    <div class="shows__venue">Venue</div>
+                    <div class="shows__location">Location</div>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</section>
+
+<!-- footer -->
+ <footer class="section--footer">
+    <section class="footer">
+        <section class="footer__content">
+
+            <section class="footer__social">
+                <div class="footer__medias">
+                    <div>
+                        <h2 class="footer__title">Get in Touch</h2>
+                    </div>
+                    <div class="footer__links">
+                        <a class="footer__link" href="https://instagram.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-instagram.svg" alt="instagram"></a>
+                        <a class="footer__link" href="https://facebook.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-facebook.svg" alt="facebook"></a>
+                        <a class="footer__link" href="https://twitter.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-twitter.svg" alt="twitter"></a>
+                    </div>
+                </div>
+
+                <div class="footer__logo--tablet">
+                    <a class="footer__link--tablet" href="#home"><img src="./../assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
+                </div>
+            </section>
+            <section class="footer__contact">
+                <div class="footer__list">
+                  <div>
+                    <h4 class="footer__list--title">The Bees Knees Management</h4>
+                  </div>
+                  <div>
+                    <p class="footer__address">503 Broadway Penthouse, </br> New York, NY 10012, USA</p>
+                  </div>
+                  <div>
+                    <p><a class="footer__email" href="mailto:info@thebeesknees.com" target="_blank">info@thebeesknees.com</a></p>
+                  </div>
+                </div>
+                <div class="footer__list">
+                  <div>
+                      <h4 class="footer__list--title">Limitless Artist Group</h4>
+                  </div>
+                  <div>
+                      <p class="footer__address">Booking Agent for </br>USA / South America / Japan</p>
+                  </div>
+                  <div>
+                      <p><a class="footer__email" href="mailto:bookings@limitlessag.com" target="_blank">bookings@limitlessag.com </a></p>
+                  </div>
+                </div>
+      
+                <div class="footer__list">
+                  <div>
+                      <h4 class="footer__list--title">ARCH Entertainment</h4>
+                  </div>
+                  <div>
+                    <p class="footer__address">Booking Agent for </br>UK / EU / AU</p>
+            </div>
+            <div>
+                <p><a class="footer__email" href="mailto:bookings@archentertainment.com" target="_blank">bookings@archentertainment.com</a></p>
+            </div>
+          </div>
+        </section>
+        <!-- Mobile display - logo -->
+        <section class="footer__logo footer__logo--mobile">
+            <a class="footer__link--mobile" href="#home"><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" /></a>
+            <p class="footer__copyright">
+              Copyright The Bees Knees © 2023 All Rights Reserved
+            </p>
+          </section>
+        </section>
+        
+        <!-- Tablet display - logo -->
+        <section class="footer__logo--tablet">
+           <a class="footer__link--tablet" href="#home"></a><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
+        </section>
+  
+        <!-- Desktop display - logo -->
+          <section class="footer__logo footer__logo--desktop">
+            <a class="footer__link--desktop" href="#home"></a><img src="/assets/logo/Logo-bandsite.svg" alt="bandsite logo" />
+          </section>
+ </footer>
+</body>
+</html>
