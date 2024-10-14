@@ -117,7 +117,8 @@
     <section class="section--comments" >
       <section class="comments">
         <h1 class="comments__title">Join the Conversation</h1>
-        <div class="comments__add--comments">
+        <!-- <div class="comments__wrapper"> -->
+          <div class="comments__add--comments">
           <div class="comments__img"></div>
           <div class="comments__form">
             <form id="form" method="post" action="#">
@@ -135,12 +136,16 @@
                     <button id="add-comment" class="comments__button" type="submit">Comment</button>
                   </li>
                   </ul>
+                </div>
               </section>
             </form>
           </div>
-        </div>
+        <!-- </div> -->
+        <!-- displaying the comments -->
+        <div class="display-comments__wrapper">
         <div class="display-comments">
           <ul id="comments-list" class="display-comments__list"></ul>
+        </div>
         </div>
       </section>
 

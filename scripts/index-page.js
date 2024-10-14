@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const commentDiv = document.createElement("div");
         commentDiv.classList.add("display-comments__card");
 
+        const commentsWrapper = document.createElement("div");
+        commentsWrapper.classList.add("display-comments__wrapper");
+
+        const imgDiv = document.createElement("div");
+        imgDiv.classList.add("display-comments__img");
+
         const commonCardDiv = document.createElement("div");
         commonCardDiv.classList.add("display-comments__content");
 
@@ -37,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         commonCardDiv.appendChild(nameAndDateDiv);
         commonCardDiv.appendChild(textDiv);
+        commentsWrapper.appendChild(imgDiv);
+        commentsWrapper.appendChild(commonCardDiv);
+        commentDiv.appendChild(commentsWrapper);
         commentDiv.appendChild(commonCardDiv);
         commentsList.appendChild(commentDiv);
     }
