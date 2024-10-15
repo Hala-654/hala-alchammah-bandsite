@@ -26,6 +26,15 @@
         height: 70vh;
         padding: 2rem;
     }
+    @include desktop {
+        height: 75vh;
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        margin: 0 auto;
+        @include flex-direction(row);
+        align-items: center;
+    }
 
     &__album-title {
         padding: 0.6rem;
@@ -57,6 +66,10 @@
         @include tablet {
             width: 58%;
         }
+        @include desktop {
+            width: 50%;
+            margin: 7rem 4rem 3rem 3rem;        
+        }
     }
 
     &__iframe {
@@ -67,6 +80,9 @@
         @include tablet {
             height: 20vh;
         }
+        @include desktop {
+            height: 13vh;
+        }
     }
 }
 
@@ -75,6 +91,14 @@
     margin: 0;
     color: $prim-black;
     font-family: 'Avenir Next LT Pro';
+    @include desktop {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+
+    }
 
     &__title {
         padding: 1rem;
@@ -84,9 +108,17 @@
             padding: 2.6rem 0 0 2rem;
             font-size: 3rem;
         }
-
+        @include desktop {
+            display: none;
+        }
         &--desktop {
             display: none;
+            @include desktop {
+                display: flex;
+                font-size: 2.3rem;
+                font-weight: 600;
+                padding: 2rem 0 0 4rem;
+            }
         }
     }
 
@@ -96,6 +128,9 @@
         font-size: 0.9rem;
         @include tablet {
             padding: 0 1rem 1rem 1rem;
+        }
+        @include desktop {
+            width: 75%;
         }
 
         &-item {
@@ -143,6 +178,7 @@
             padding: 0;
             @include flex (row, center, space-between);
         }
+       
 
     }
 
@@ -191,7 +227,11 @@
         @include tablet {
             width: 80%;
             font-size: 1rem;
-            padding: 1rem 0.8rem 1rem 0;
+            margin: 0.5rem;
+        }
+        @include desktop {
+            width: 100%;
+            margin: 0.8rem;
         }
 
     }

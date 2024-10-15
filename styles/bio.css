@@ -145,6 +145,10 @@ html {
   border-bottom-color: #FFFFFF;
   padding: 0 0 0.5rem 0;
 }
+.navbar__list1:hover {
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
 @media screen and (min-width: 48rem) {
   .navbar__list1 {
     padding: 0 0 1rem 0;

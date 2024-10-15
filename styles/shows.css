@@ -145,6 +145,10 @@ html {
   border-bottom-color: #FFFFFF;
   padding: 0 0 0.5rem 0;
 }
+.navbar__list1:hover {
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
 @media screen and (min-width: 48rem) {
   .navbar__list1 {
     padding: 0 0 1rem 0;
@@ -526,6 +530,20 @@ html {
     padding: 2rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .hero {
+    height: 75vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .hero__album-title {
   padding: 0.6rem;
   font-weight: 600;
@@ -561,6 +579,12 @@ html {
     width: 58%;
   }
 }
+@media screen and (min-width: 80rem) {
+  .hero__music {
+    width: 50%;
+    margin: 7rem 4rem 3rem 3rem;
+  }
+}
 .hero__iframe {
   width: 90%;
   height: 19vh;
@@ -572,12 +596,26 @@ html {
     height: 20vh;
   }
 }
+@media screen and (min-width: 80rem) {
+  .hero__iframe {
+    height: 13vh;
+  }
+}
 
 .shows {
   padding: 0;
   margin: 0;
   color: #323232;
   font-family: "Avenir Next LT Pro";
+}
+@media screen and (min-width: 80rem) {
+  .shows {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .shows__title {
   padding: 1rem;
@@ -590,8 +628,21 @@ html {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__title {
+    display: none;
+  }
+}
 .shows__title--desktop {
   display: none;
+}
+@media screen and (min-width: 80rem) {
+  .shows__title--desktop {
+    display: flex;
+    font-size: 2.3rem;
+    font-weight: 600;
+    padding: 2rem 0 0 4rem;
+  }
 }
 .shows__list {
   margin: 1rem;
@@ -601,6 +652,11 @@ html {
 @media screen and (min-width: 48rem) {
   .shows__list {
     padding: 0 1rem 1rem 1rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__list {
+    width: 75%;
   }
 }
 .shows__list-item {
@@ -704,6 +760,12 @@ html {
   .shows__button {
     width: 80%;
     font-size: 1rem;
-    padding: 1rem 0.8rem 1rem 0;
+    margin: 0.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__button {
+    width: 100%;
+    margin: 0.8rem;
   }
 }/*# sourceMappingURL=shows.css.map */

@@ -14,17 +14,13 @@
     padding: 0 1rem;
     width: 100%;
     margin: 0 auto;
+    
 
     &__title {
         font-size: 2rem;
         padding: 1rem 0;
     }
 
-    // &__wrapper {
-    //     @include desktop {
-    //         @include flex(column, center, center);
-    //     }
-    // }
     &__add--comments {
         @include flex-direction(row);
         width: 100%;
