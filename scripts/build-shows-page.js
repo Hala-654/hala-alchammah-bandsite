@@ -7,24 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
         showsCardLi.classList.add("shows__cards");
 
 
-        const showsDateUl = document.createElement("ul");
-        const showsVenueUl = document.createElement("ul");
-        const showsLocationUl = document.createElement("ul");
-        const showsButtonUl = document.createElement("ul");
-
-        showsButtonUl.classList.add("shows__button");
-        showsButtonUl.textContent = item.button;
+        const showsDateDiv = document.createElement("div");
+        showsDateDiv.classList.add("shows__date");
+        showsDateDiv.innerHTML = `<span class="shows__label">Date</span><span class="shows__info--date">${item.date}</span>`;
         
-        showsDateUl.innerHTML = `<li class="shows__label">Date</li><li class="shows__info--date">${item.date}</li>`;
-        showsVenueUl.innerHTML = `<li class="shows__label">Venue</li><li class="shows__info--venue">${item.venue}</li>`;
-        showsLocationUl.innerHTML = `<li class="shows__label">Location</li><li class="shows__info--location">${item.location}</li>`;
+        const showsVenueDiv = document.createElement("div");
+        showsVenueDiv.classList.add("shows__venue");
+        showsVenueDiv.innerHTML = `<span class="shows__label">Venue</span><span class="shows__info--venue">${item.venue}</span>`;
 
-        showsCardLi.appendChild(showsDateUl);
-        showsCardLi.appendChild(showsVenueUl);
-        showsCardLi.appendChild(showsLocationUl);
-        showsCardLi.appendChild(showsButtonUl);
+        const showsLocationDiv = document.createElement("div");
+        showsLocationDiv.classList.add("shows__location");
+        showsLocationDiv.innerHTML = `<span class="shows__label">Location</span><span class="shows__info--location">${item.location}</span>`;
+
+        const showsButton = document.createElement("button");
+        showsButton.classList.add("shows__button");
+        showsButton.textContent = item.button;
+
+        showsCardLi.appendChild(showsDateDiv);
+        showsCardLi.appendChild(showsVenueDiv);
+        showsCardLi.appendChild(showsLocationDiv);
+        showsCardLi.appendChild(showsButton);
+        
         showsList.appendChild(showsCardLi);
-        
 
         showsCardLi.addEventListener("click", () => {
             const selected = document.querySelector('.shows__cards--clicked');

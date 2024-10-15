@@ -517,15 +517,15 @@ html {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 24vh;
-  padding: 1rem 0;
+  height: 50vh;
   font-family: "Avenir Next LT Pro";
 }
 .hero__album--title {
-  padding: 1rem 0;
+  padding: 1rem;
   font-weight: 600;
 }
 .hero__title {
+  padding: 0.6rem;
   align-self: left;
   width: 72%;
   color: #FFFFFF;
@@ -540,7 +540,7 @@ html {
 }
 .hero__iframe {
   width: 90%;
-  height: 13vh;
+  height: 19vh;
   border-radius: 0.4rem;
   border: none;
 }
@@ -554,16 +554,26 @@ html {
 .shows__title {
   padding: 1rem;
   font-weight: 600;
+  font-family: "Avenir Next";
 }
 .shows__title--desktop {
   display: none;
 }
 .shows__list {
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 0.0625rem solid #323232;
+  margin: 1rem;
   text-transform: uppercase;
   font-size: 0.9rem;
+}
+.shows__list-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.shows__list-item--header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
 }
 .shows__venue {
   padding-left: 0;
@@ -576,40 +586,48 @@ html {
   margin: 0;
   display: flex;
   flex-direction: column;
-  border-bottom: 0.0625rem;
-  border: solid;
-  border-color: #000000;
+  border-bottom: 0.0625rem solid;
+  border-color: #E1E1E1;
 }
 .shows__cards--clicked {
+  border-color: #AFAFAF;
   border-radius: 0.2rem;
-  transform: all ease-in-out 0.2s;
+  transition: background-color 0.2s ease;
 }
-.shows__cards:hover {
-  background-color: #E1E1E1;
-  cursor: pointer;
+.shows__date, .shows__venue, .shows__location {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  font-size: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .shows__info--date, .shows__info--venue, .shows__info--location {
+  .shows__date, .shows__venue, .shows__location {
     min-width: 8.8rem;
     -moz-column-gap: 0.1rem;
          column-gap: 0.1rem;
   }
 }
-.shows__info__label {
+.shows__label {
   color: #AFAFAF;
   padding: 1rem 0 0 0;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
-.shows__info__label--tabletAndDesktop {
+.shows__label--tabletAndDesktop {
   display: none;
 }
 .shows__button {
-  margin: 1rem 0 0 0;
+  text-transform: uppercase;
   background-color: #323232;
   color: #FFFFFF;
   padding: 0.625rem 1.25rem;
   text-align: center;
   cursor: pointer;
-  width: 60%;
+  width: 95%;
+  transition: background-color 0.2s ease;
+}
+.shows__button:hover {
+  background-color: #E1E1E1;
+  color: #323232;
+  cursor: pointer;
 }/*# sourceMappingURL=shows.css.map */
