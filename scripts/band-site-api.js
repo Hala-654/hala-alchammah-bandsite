@@ -1,7 +1,8 @@
 class BandSiteApi {
     constructor(apiKey) {
         this.apiKey = apiKey;
-        this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/comments/"
+        this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/comments/";
+        this.baseShowUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates/";
     }
 
     async postComment(comment) {
@@ -14,7 +15,7 @@ class BandSiteApi {
                 },
                 body: JSON.stringify({
                     name: comment.name, 
-                    comment: comment.commentText 
+                    comment: comment.comment 
                 }),
             });
             if (!response.ok) {
@@ -34,19 +35,20 @@ class BandSiteApi {
             const response = await axios.get(url);
             return response.data.sort ((a, b) => b.timestamp - a.timestamp);
         } catch (error) {
-            console.error ("Error posting the comment:", error);
-            throw new Error("Failed to post the comment.");
+            console.error ("Error getting the comment:", error);
+            throw new Error("Failed to get the comment.");
             }
     }
     async getShows (){
-        const url = `${this.baseUrl}?api_key=${this.apiKey}`;
+        const url = `${this.baseShowUrl}?api_key=${this.apiKey}`;
         try {
             const response = await axios.get(url);
             return response.data;
         }
         catch (error) {
-            console.error ("Error posting the comment:", error);
-            throw new Error("Failed to post the comment.");
+            console.error ("Error fetching the shows:", error);
+            throw new Error("Failed to fetch the shows.");
         }
     }
 }
+export default BandSiteApi;

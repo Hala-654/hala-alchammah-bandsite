@@ -91,8 +91,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const userName =event.target.user_name.value.trim();
+        const userName = event.target.user_name.value.trim();
         const commentText = event.target.user_comment.value.trim();
+        
         if (userName === "" && commentText === "") {
             nameInput.classList.add("comments__required");
             commentsInput.classList.add("comments__required");
