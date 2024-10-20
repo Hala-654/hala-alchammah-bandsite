@@ -1,7 +1,8 @@
-@use './variables' as *;
-@use './mixins' as *;
-@use './global' as *;
-@use './typography' as *;
+@use './../main' as *;
+@use './../mixins' as *;
+@use './../global' as *;
+@use './../typography' as *;
+@use './../variables' as *;
 
 .display-comments__wrapper {
     display: flex;
@@ -55,16 +56,17 @@
         color: $prim-silver;
         font-size: 0.7rem;
         font-family: 'Avenir Next LT Pro';
-        
     }
 
-    &__name, &__text {
+    &__name, 
+    &__text {
         width: 100%;
         margin: 0.3rem 0 1.2rem 0;
         padding: 1rem;
         border-radius: 0.25rem;
         border-style: solid;
         border-color: $sec-mercury;
+        resize: none;
 
     }
 

@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/assets/font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/assets/font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-style: 700;
+  font-style: normal;
+}
+html {
+  font-family: "Avenir Next";
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,32 +47,6 @@ body {
 
 body, h1, h2, h3, h4, p {
   margin: 0;
-}
-
-@font-face {
-  font-family: "Avenir Next LT Pro";
-  src: url("/assets/font/AvenirNextLTPro-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("/assets/font/AvenirNextLTPro-Demi.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("/assets/font/AvenirNextLTPro-Bold.otf") format("opentype");
-  font-style: 700;
-  font-style: normal;
-}
-html {
-  font-family: "Avenir Next";
-}
-
-.footer__title, .footer__list--title {
-  font-weight: 600;
 }
 
 .section--header {
@@ -239,6 +235,7 @@ html {
 .footer__title {
   padding: 0;
   font-size: 1rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
   .footer__title {
@@ -301,6 +298,7 @@ html {
 .footer__list--title {
   padding: 0;
   font-size: 0.8rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
   .footer__list--title {
@@ -425,6 +423,7 @@ html {
   border-radius: 0.25rem;
   border-style: solid;
   border-color: #E1E1E1;
+  resize: none;
 }
 .comments__btn {
   display: flex;

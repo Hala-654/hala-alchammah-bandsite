@@ -2,7 +2,7 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
 @use './partials/typography' as *;
-@use './partials/comments' as *;
+@use './partials/comments/comments' as *;
 
 .section {
     &--hero {

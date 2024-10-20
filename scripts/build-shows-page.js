@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     'use strict';
 
-    const myBandApi = new BandSiteApi(api_key);
     const api_key = "40ef9834-e448-42ed-95da-2dd7bb0f2b9f";
+    const myBandApi = new BandSiteApi(api_key);
     const showsList = document.getElementById('shows-list');
 
     async function fetchAndDisplayShows() {
@@ -54,6 +54,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     await fetchAndDisplayShows();
-
 
 });

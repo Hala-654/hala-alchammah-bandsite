@@ -2,7 +2,7 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
 @use './partials/typography' as *;
-@use './partials/comments' as *;
+@use './comments/comments' as *;
 
 .section {
     
@@ -36,8 +36,7 @@
     }
     @include desktop {
         height: 65vh;
-        width: 80rem;
-        margin: 0 auto;
+        width: 100%;
         object-fit: cover;
         object-position: center;
     }
